@@ -22,8 +22,10 @@ export const Auth = ({ type }) => {
 
       const jwt = response?.data?.token;
       const userid = response?.data?.data?.user?._id;
+      const name = response?.data?.data?.user?.name;
       localStorage.setItem("token", jwt);
       localStorage.setItem("userid", userid);
+      localStorage.setItem("name", name);
       navigate("/blogs");
     } catch (e) {
       alert(`Error while ${type === "signup" ? "signup" : "login"}`);

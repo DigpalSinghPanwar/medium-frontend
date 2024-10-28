@@ -8,6 +8,7 @@ export const Appbar = () => {
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userid");
+    localStorage.removeItem("name");
     navigate("/");
   };
 
